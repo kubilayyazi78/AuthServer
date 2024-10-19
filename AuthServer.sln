@@ -5,6 +5,20 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.API", "AuthServer.API\AuthServer.API.csproj", "{326BCF2C-1BE5-4D30-85C8-25D6E8D4C6F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.Core", "AuthServer.Core\AuthServer.Core.csproj", "{0633FB2B-12D6-4B6A-B0C9-95B2302FF3F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.Data", "AuthServer.Data\AuthServer.Data.csproj", "{4FFF994C-D783-4C7E-AB1F-E25607BED80C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.Service", "AuthServer.Service\AuthServer.Service.csproj", "{3587A94E-32BA-45AE-BFA7-23D302F74CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp1.API", "MiniApp1.API\MiniApp1.API.csproj", "{0889C59F-1C25-4429-942B-2B4563BE27D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp2.API", "MiniApp2.API\MiniApp2.API.csproj", "{701EDC7B-242F-4817-9281-83BC0266F5DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp3.API", "MiniApp3.API\MiniApp3.API.csproj", "{346B0FE3-6C7E-46B4-AEB1-B9D60DAA741F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{5589AFD3-8B2C-419D-9459-4732C2994D85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +29,34 @@ Global
 		{326BCF2C-1BE5-4D30-85C8-25D6E8D4C6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326BCF2C-1BE5-4D30-85C8-25D6E8D4C6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326BCF2C-1BE5-4D30-85C8-25D6E8D4C6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0633FB2B-12D6-4B6A-B0C9-95B2302FF3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0633FB2B-12D6-4B6A-B0C9-95B2302FF3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0633FB2B-12D6-4B6A-B0C9-95B2302FF3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0633FB2B-12D6-4B6A-B0C9-95B2302FF3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFF994C-D783-4C7E-AB1F-E25607BED80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFF994C-D783-4C7E-AB1F-E25607BED80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFF994C-D783-4C7E-AB1F-E25607BED80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFF994C-D783-4C7E-AB1F-E25607BED80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3587A94E-32BA-45AE-BFA7-23D302F74CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3587A94E-32BA-45AE-BFA7-23D302F74CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3587A94E-32BA-45AE-BFA7-23D302F74CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3587A94E-32BA-45AE-BFA7-23D302F74CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0889C59F-1C25-4429-942B-2B4563BE27D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0889C59F-1C25-4429-942B-2B4563BE27D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0889C59F-1C25-4429-942B-2B4563BE27D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0889C59F-1C25-4429-942B-2B4563BE27D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701EDC7B-242F-4817-9281-83BC0266F5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701EDC7B-242F-4817-9281-83BC0266F5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701EDC7B-242F-4817-9281-83BC0266F5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701EDC7B-242F-4817-9281-83BC0266F5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346B0FE3-6C7E-46B4-AEB1-B9D60DAA741F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346B0FE3-6C7E-46B4-AEB1-B9D60DAA741F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346B0FE3-6C7E-46B4-AEB1-B9D60DAA741F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346B0FE3-6C7E-46B4-AEB1-B9D60DAA741F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5589AFD3-8B2C-419D-9459-4732C2994D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5589AFD3-8B2C-419D-9459-4732C2994D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5589AFD3-8B2C-419D-9459-4732C2994D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5589AFD3-8B2C-419D-9459-4732C2994D85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
