@@ -36,7 +36,7 @@ namespace AuthServer.Service.Services
             return Convert.ToBase64String(numberByte);
         }
 
-        private IEnumerable<Claim> GetClaim(UserApp userApp, List<String> audiences)
+        private IEnumerable<Claim> GetClaims(UserApp userApp, List<String> audiences)
         {
             var userList = new List<Claim>
             {
@@ -50,7 +50,18 @@ namespace AuthServer.Service.Services
 
             return userList;
         }
+        private IEnumerable<Claim> GetClaimByClient(Client client)
+        {
+            var claims = new List<Claim>();
 
+            claims.AddRange(client.Audiences.Select(x => new Claim(JwtRegisteredClaimNames.Aud, x)));
+
+            claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Sub, client.Id.ToString()));
+
+
+            return claims;
+        }
         public TokenDto CreateToken(UserApp userApp)
         {
             throw new NotImplementedException();
