@@ -6,6 +6,7 @@ using AuthServer.Core.UnitOfWork;
 using AuthServer.Data;
 using AuthServer.Data.Repositories;
 using AuthServer.Service.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -61,6 +62,33 @@ namespace AuthServer.API
 
             services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption"));
             services.Configure<List<Client>>(Configuration.GetSection("Clients"));
+
+            var tokenOptions = Configuration.GetSection("TokenOptions").Get<CustomTokenOption>();
+
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme= JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+            {
+                opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidIssuer=tokenOptions.Issuer,
+                    ValidAudience = tokenOptions.Audience[0],
+                    IssuerSigningKey=SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+                    ValidateIssuerSigningKey=true,
+                    ValidateAudience=true,
+                    ValidateIssuer=true,
+                    ValidateLifetime=true,
+                    ClockSkew=TimeSpan.Zero
+                };
+            });
+
+
+
+
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
