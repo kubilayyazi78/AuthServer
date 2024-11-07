@@ -63,7 +63,7 @@ namespace AuthServer.API
             services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption"));
             services.Configure<List<Client>>(Configuration.GetSection("Clients"));
 
-            var tokenOptions = Configuration.GetSection("TokenOptions").Get<CustomTokenOption>();
+            var tokenOptions = Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
 
             services.AddAuthentication(opt =>
             {
